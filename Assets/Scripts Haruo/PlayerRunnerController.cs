@@ -40,6 +40,12 @@ public class PlayerRunnerController : MonoBehaviour
         Vector3 targetPos = new Vector3(targetX, transform.position.y, transform.position.z);
         transform.position = Vector3.Lerp(transform.position, targetPos, horizontalSpeed * Time.deltaTime);
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            GameManagerRunner.Instance.GameOver();
+        }
+    }
 
 }

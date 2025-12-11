@@ -23,7 +23,7 @@ public class ObstacleSpawner : MonoBehaviour
         float[] lanes = { -laneWidth, 0, laneWidth };
         float x = lanes[Random.Range(0, lanes.Length)];
 
-        Vector3 spawnPos = new Vector3(x, 0.5f, transform.position.z);
+        Vector3 spawnPos = new Vector3(x, -1f, transform.position.z);
         Instantiate(obstaclePrefab, spawnPos, Quaternion.identity);
     }
 }
