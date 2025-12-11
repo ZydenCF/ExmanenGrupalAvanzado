@@ -4,13 +4,16 @@ using TMPro;
 internal class GameManager : MonoBehaviour
 {
     private int score = 0;
-    private float timeRemaining = 90f;
+    private float timeRemaining = 30f;
     private bool gameActive = true;
 
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private GameObject gameOverPanel; 
-    [SerializeField] private TextMeshProUGUI gameOverText; 
+    [SerializeField] private TextMeshProUGUI gameOverText;
+
+    private const string shooterScoreKey = "ShooterKey";
+    public string ShooterKey => shooterScoreKey;
 
     private void Start()
     {
@@ -72,6 +75,7 @@ internal class GameManager : MonoBehaviour
         // Reactiva y cambia el texto
         if (gameOverText != null)
         {
+            PlayerPrefs.SetInt(shooterScoreKey, score);
             gameOverText.gameObject.SetActive(true); 
             gameOverText.text = "Game Over!\nFinal Score: " + score.ToString();
         }

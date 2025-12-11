@@ -5,6 +5,9 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] private GameObject obstaclePrefab;
     [SerializeField] private float spawnInterval = 1.5f;
     [SerializeField] private float laneWidth = 2f;
+    [SerializeField] private int score = 0;
+    
+    public int Score { get { return score; } set { score = value; } }
 
     private float timer = 0f;
 
