@@ -41,4 +41,5 @@ public class PlayerRunnerController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, targetPos, horizontalSpeed * Time.deltaTime);
     }
 
+
 }
