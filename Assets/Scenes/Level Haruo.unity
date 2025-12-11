@@ -393,7 +393,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1, y: -1.85, z: 14.4}
-  m_LocalScale: {x: 4.348048, y: 0.22085, z: 43.495605}
+  m_LocalScale: {x: 13.045884, y: 0.22085, z: 43.495605}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -503,7 +503,7 @@ Transform:
   m_GameObject: {fileID: 1498281657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -1.21, z: 0.1402}
+  m_LocalPosition: {x: 0.1, y: -1.24, z: 0.1402}
   m_LocalScale: {x: 4.348048, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 1712707168}
   - component: {fileID: 1712707167}
   - component: {fileID: 1712707166}
+  - component: {fileID: 1712707171}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -554,7 +555,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1712707167
 CapsuleCollider:
@@ -650,6 +651,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712707171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712707165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1b71f9106ba7a14baca7a76de744474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRunnerController
+  forwardSpeed: 10
+  horizontalSpeed: 7
+  laneWidth: 4
 --- !u!1 &2088661572
 GameObject:
   m_ObjectHideFlags: 0
